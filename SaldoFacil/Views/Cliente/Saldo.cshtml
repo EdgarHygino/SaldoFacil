@@ -1,0 +1,44 @@
+﻿@model IEnumerable<SaldoFacil.Model.Models.Entities.Clientes>
+
+@{
+    ViewData["Title"] = "Saldo";
+}
+
+<h2>Saldo do Cliente</h2>
+
+<form id="formCliente" asp-action="ExibirSaldo" method="get">
+    <div class="form-group">
+        <label for="clienteId">Selecione o Cliente:</label>
+        <select class="form-control" id="clienteId" name="clienteId">
+            @foreach (var cliente in Model)
+            {
+                <option value="@cliente.Id">@cliente.Name</option>
+            }
+        </select>
+    </div>
+    <br />
+    <br />
+    <button type="submit" class="btn btn-primary">Ver Saldo</button>
+</form>
+<br/>
+<br/>
+<div id="saldoContainer"></div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#formCliente').submit(function (event) {
+                event.preventDefault();
+                var form = $(this);
+                $.ajax({
+                    url: form.attr('action'),
+                    type: 'GET',
+                    data: form.serialize(),
+                    success: function (result) {
+                        $('#saldoContainer').html(result);
+                    }
+                });
+            });
+        });
+    </script>
+}

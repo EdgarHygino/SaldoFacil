@@ -1,0 +1,41 @@
+﻿@model IEnumerable<SaldoFacil.Model.Models.Entities.Clientes>
+
+@{
+    ViewData["Title"] = "Transferência";
+}
+
+<h2>Realizar Transferência</h2>
+
+<form asp-action="Transferir" method="post">
+    @if (ViewData.ModelState.ContainsKey(""))
+    {
+        <div class="alert alert-danger" role="alert">
+            @Html.ValidationSummary()
+        </div>
+    }
+    <div class="form-group">
+        <label for="clienteRemetente">Cliente Remetente:</label>
+        <select class="form-control" id="clienteRemetente" name="clienteRemetente">
+            @foreach (var cliente in ViewBag.Clientes)
+            {
+                <option value="@cliente.Id">@cliente.Name</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="valor">Valor da Transferência:</label>
+        <input type="number" class="form-control" id="valor" name="valor">
+    </div>
+    <div class="form-group">
+        <label for="destinatario">Destinatário:</label>
+        <select class="form-control" id="destinatario" name="destinatario">
+            @foreach (var cliente in ViewBag.Clientes)
+            {
+                <option value="@cliente.Id">@cliente.Name</option>
+            }
+        </select>
+    </div>
+    <br />
+    <br />
+    <button type="submit" class="btn btn-primary">Transferir</button>
+</form>
