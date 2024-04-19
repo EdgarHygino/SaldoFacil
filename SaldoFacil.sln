@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaldoFacil", "SaldoFacil\SaldoFacil.csproj", "{E82E9DD8-6A7C-4F8E-AEF3-BE6D9F66A767}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaldoFacil.Transacao.API", "..\SaldoFacilAPI\SaldoFacil.API\SaldoFacil.Transacao.API.csproj", "{A722300C-D590-4CC8-863D-38AF35AF434B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaldoFacil.Transacao.API", "..\SaldoFacil\SaldoFacilAPI\SaldoFacil.API\SaldoFacil.Transacao.API.csproj", "{A722300C-D590-4CC8-863D-38AF35AF434B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaldoFacil.Model", "SaldoFacil.Model\SaldoFacil.Model.csproj", "{96440C5F-1537-4EC8-A7CF-CA102E1CE25D}"
 EndProject
