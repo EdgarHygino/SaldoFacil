@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SaldoFacil\SaldoFacil.Model\SaldoFacil.Model.csproj" />
+    <ProjectReference Include="..\..\..\SaldoFacil\SaldoFacil.Model\SaldoFacil.Model.csproj" />
   </ItemGroup>
 
 </Project>
